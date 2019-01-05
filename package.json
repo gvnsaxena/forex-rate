@@ -17,7 +17,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "6.0.0",
-    "redux": "4.0.1"
+    "redux": "4.0.1",
+    "redux-thunk": "^2.1.0"
   },
   "author": "gvnsaxena@gmail",
   "license": "ISC",

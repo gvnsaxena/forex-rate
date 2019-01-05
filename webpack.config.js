@@ -13,6 +13,7 @@ module.exports = {
 entry: {
     main: `${APP_DIR}/app.js`
 },
+devtool: 'source-map',
 devServer: {
   contentBase: path.join(__dirname, `dist`),
   port: 9000
