@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import CurrencyDropdown from "./CurrencyDropdown.jsx";
 
-describe('Exchange rate page', () => {
+describe('Currency Dropdown', () => {
     let component = "";
     beforeEach(() => {
         component = shallow(<CurrencyDropdown/>);

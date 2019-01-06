@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import CurrencyBox from "./CurrencyBox.jsx";
 
-describe('Exchange rate page', () => {
+describe('Currency Box', () => {
     let component = "";
     beforeEach(() => {
         component = shallow(<CurrencyBox/>);
