@@ -1,5 +1,5 @@
 import { CALL_API } from '../middleware/fxrate-api'
-import {API_REQUEST, API_SUCCESS, API_ERROR} from '../constants/constant'
+import {API_REQUEST, API_SUCCESS, API_ERROR, SET_FX_VALUE} from '../constants/constant'
 
 const FxRate = () => ({
     [CALL_API]: {
@@ -7,10 +7,12 @@ const FxRate = () => ({
     }
 })
 
-export const loadFxRate = (dispatch) => {
-    return dispatch.dispatch(FxRate())
+export const loadFxRate = () => (dispatch) => {
+    return dispatch(FxRate())
 }
-
+export const setFxValue = (value, requiredFields=[]) => (dispatch, getState) => {
+    return dispatch({response:{value: value, requiredFields},  type: SET_FX_VALUE});
+}
 export const resetErrorMessage = () => ({
     type: RESET_ERROR_MESSAGE
 })

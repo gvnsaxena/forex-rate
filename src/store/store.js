@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import fxapi from '../middleware/fxrate-api'
-import {ExRateSymbols} from '../reducers/reducer'
+import rootReducer from '../reducers/reducer'
 
 const configureStore = preloadedState => {
   const store = createStore(
-    ExRateSymbols,
+    rootReducer,
     preloadedState,
     compose(
       applyMiddleware(thunk, fxapi)
