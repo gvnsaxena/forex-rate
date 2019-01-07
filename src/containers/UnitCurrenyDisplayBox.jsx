@@ -7,7 +7,7 @@ class UnitCurrenyDisplayBox extends Component {
       return null;
     }
     return (
-      <div>
+      <div className={this.props.className}>
         <p>USD 1 = {this.props.exSymbolValue.value.requiredFields} {this.props.exSymbolValue.value.value}</p>
       </div>
     )

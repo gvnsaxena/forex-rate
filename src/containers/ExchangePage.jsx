@@ -16,12 +16,13 @@ class ExchangePage extends Component {
     const { dispatch } = this.props;
     return (
       <div>
-        <UnitCurrenyDisplayBox currency={this.props.ExRateSymbols} exSymbolValue={this.props.FxSymbolValue}
+        <UnitCurrenyDisplayBox className="unit-currency-box"
+          currency={this.props.ExRateSymbols} exSymbolValue={this.props.FxSymbolValue}
           dispatch = {dispatch}/>
-        <CurrencyBox inputBoxId="enabledBox" exSymbolValue={this.props.FxSymbolValue} 
+        <CurrencyBox className="upper-currency-box" selectClassName="display-select" rateBoxClass="input-rate-box" inputBoxId="enabledBox" exSymbolValue={this.props.FxSymbolValue} 
           currency={this.props.ExRateSymbols} selectId="disabledSelect"
           disableSelectBox={true} disableInputBox={false} dispatch = {dispatch}/>
-        <CurrencyBox inputBoxId="disabledBox" exSymbolValue={this.props.FxSymbolValue} 
+        <CurrencyBox rateBoxClass="display-rate-box" selectClassName="input-select" className="lower-currency-box" inputBoxId="disabledBox" exSymbolValue={this.props.FxSymbolValue} 
           currency={this.props.ExRateSymbols} selectId="enabledSelect"
           disableSelectBox={false} disableInputBox={true} dispatch = {dispatch}/>
       </div>

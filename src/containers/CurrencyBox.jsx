@@ -12,11 +12,11 @@ class CurrencyBox extends Component {
       return null;
     }
     return (
-      <div>
-        <CurrencyDropdown dispatch={this.props.dispatch} 
+      <div className={this.props.className}>
+        <CurrencyDropdown dispatch={this.props.dispatch} selectClassName={this.props.selectClassName}
           disableSelectBox={this.props.disableSelectBox} 
           currency={currency.rates} selectId={this.props.selectId}/>
-        <RateBox exSymbolValue={this.props.exSymbolValue} inputBoxId={this.props.inputBoxId} 
+        <RateBox className={this.props.rateBoxClass} exSymbolValue={this.props.exSymbolValue} inputBoxId={this.props.inputBoxId} 
           disableInputBox={this.props.disableInputBox} 
           selectId={this.props.selectId}/>
       </div>

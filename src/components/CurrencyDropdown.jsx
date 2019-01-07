@@ -31,7 +31,8 @@ class CurrencyDropdown extends Component {
     
     return (
       <div >
-        <select id={this.props.selectId} disabled={this.props.disableSelectBox} 
+        <select className={this.props.selectClassName} id={this.props.selectId} 
+          disabled={this.props.disableSelectBox} 
           onChange={this._onChange}>
           {Object.keys(currency).map(function(n, id) { 
               return (<option key={n +"_"+id} value={n}>{n}</option>);
