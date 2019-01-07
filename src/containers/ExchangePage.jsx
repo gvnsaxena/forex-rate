@@ -11,6 +11,9 @@ class ExchangePage extends Component {
   componentDidMount() {
     const { dispatch } = this.props
     dispatch(loadFxRate(this.props));
+    setInterval( ()=>{ 
+      dispatch(loadFxRate(this.props));
+    }, 10000);
   }
   render() {
     const { dispatch } = this.props;

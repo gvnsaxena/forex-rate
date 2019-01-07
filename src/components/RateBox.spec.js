@@ -3,9 +3,19 @@ import { shallow } from 'enzyme';
 import RateBox from "./RateBox.jsx";
 
 describe('Rate Box', () => {
-    let component = "";
+    let component = "", instance="";
+    const buildComponent = (props) => {
+        return shallow( <RateBox { ...props}/>)
+    };
     beforeEach(() => {
-        component = shallow(<RateBox/>);
+        component = buildComponent({
+            exSymbolValue:{
+                value:2,
+                requiredFields : 'AED'
+            },
+            className:'input-rate-box'
+        });
+        instance = component.instance();
     })
     it('should render', function() {    
         expect(component).toBeTruthy();

@@ -10,9 +10,6 @@ const FxRate = () => ({
 export const loadFxRate = () => (dispatch) => {
     return dispatch(FxRate())
 }
-export const setFxValue = (value, requiredFields=[]) => (dispatch, getState) => {
+export const setFxValue = (value, requiredFields=[]) => (dispatch) => {
     return dispatch({response:{value: value, requiredFields},  type: SET_FX_VALUE});
 }
-export const resetErrorMessage = () => ({
-    type: RESET_ERROR_MESSAGE
-})

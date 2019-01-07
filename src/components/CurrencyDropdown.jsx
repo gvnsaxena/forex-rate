@@ -30,7 +30,7 @@ class CurrencyDropdown extends Component {
     }
     
     return (
-      <div >
+      <div>
         <select className={this.props.selectClassName} id={this.props.selectId} 
           disabled={this.props.disableSelectBox} 
           onChange={this._onChange}>
