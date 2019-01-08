@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { setFxValue } from '../actions/action'
-import PropTypes from 'prop-types';
 class CurrencyDropdown extends Component {
   componentDidUpdate(prevProps) {
       if(this.refs.disabledSelect){
         this.refs.disabledSelect.value = "USD";
       }
-      if (prevProps.currency !== this.props.currency) {
-        if(this.refs.enabledSelect){
-          this.refs.enabledSelect.value = "GBP";
+      if(this.refs.enabledSelect && !prevProps.currency){
+        this.refs.enabledSelect.value = "GBP";
+      }
+      if(this.refs.enabledSelect){
+        if (prevProps.currency !== this.props.currency) {
           this.props.dispatch(setFxValue(this.props.currency[this.refs.enabledSelect.value],
             this.refs.enabledSelect.value));
         }
       }
     }
-
   _onChange = () => {
       this.props.dispatch(setFxValue(this.props.currency[this.refs.enabledSelect.value],
         this.refs.enabledSelect.value));
